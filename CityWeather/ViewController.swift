@@ -130,7 +130,8 @@ override func viewWillAppear(_ animated: Bool) {
             print(city_list)
         } catch {
             print(error.localizedDescription)
-            InternetConnectionAlert ()
+            if searchBar.text != ""
+            {InternetConnectionAlert ()}
                     }
                 }
         }.resume()
