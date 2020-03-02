@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15702" systemVersion="19D76" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="City" representedClassName="City" syncable="YES">
+        <attribute name="cityName" attributeType="String"/>
+        <relationship name="showplace" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Showplace" inverseName="city" inverseEntity="Showplace"/>
+    </entity>
+    <entity name="Showplace" representedClassName="Showplace" syncable="YES">
+        <attribute name="desc" attributeType="String" maxValueString="120"/>
+        <attribute name="descFull" attributeType="String" maxValueString="10000"/>
+        <attribute name="image" attributeType="URI"/>
+        <attribute name="lan" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="lon" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="showplaceName" attributeType="String"/>
+        <relationship name="city" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="City" inverseName="showplace" inverseEntity="City"/>
+    </entity>
+    <elements>
+        <element name="Showplace" positionX="-54" positionY="0" width="414.0703125" height="148"/>
+        <element name="City" positionX="553.26953125" positionY="-96.79296875" width="128" height="73"/>
+    </elements>
+</model>
